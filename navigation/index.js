@@ -1,0 +1,20 @@
+import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react';
+import Home from '../screens/home';
+import Quiz from '../screens/quiz';
+import Result from '../screens/result';
+
+const Stack = createStackNavigator();
+
+function MyStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
+      <Stack.Screen name="Quiz" component={Quiz} />
+      <Stack.Screen name="Result" component={Result} />
+      <Stack.Screen name="Settings" component={Settings} />
+    </Stack.Navigator>
+  );
+}
+
+export default MyStack;
